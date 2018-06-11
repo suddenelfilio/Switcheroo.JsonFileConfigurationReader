@@ -1,30 +1,31 @@
 ﻿
 using System.IO;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Switcheroo.Toggles;
 
 namespace Switcheroo.JsonFileConfigurationReader.Test
 {
     using System.Collections.Generic;
     using System.Linq;
-    using NUnit.Framework;
 
-    [TestFixture]
+    [TestClass]
     public class JsonFileConfigurationReaderTests
     {
-        [Test]
+        [TestMethod]
         public void Read_Returns_No_Elements_If_No_File_Is_Provided()
         {
             var reader = new JsonFileConfigurationReader(null);
             var features = reader.GetFeatures();
 
             Assert.IsNotNull(features);
-            CollectionAssert.IsEmpty(features);
+            Assert.IsTrue(features.Any() == false);
         }
 
-        [Test]
+        [TestMethod]
+        [DeploymentItem("features.json")]
         public void Read_Returns_Simple_Boolean_Toggles()
         {
-            var reader = new JsonFileConfigurationReader(Path.Combine(TestContext.CurrentContext.TestDirectory, @"features.json"));
+            var reader = new JsonFileConfigurationReader( @"features.json");
             List<IFeatureToggle> features = reader.GetFeatures().ToList();
 
             var feature1 = features.Single(x => x.Name == "testSimpleEnabled");
@@ -34,10 +35,11 @@ namespace Switcheroo.JsonFileConfigurationReader.Test
             Assert.IsFalse(feature2.IsEnabled());
         }
 
-        [Test]
+        [TestMethod]
+        [DeploymentItem("features.json")]
         public void Read_Returns_DateRange_Toggles_If_Dates_Have_Been_Specified()
         {
-            var reader = new JsonFileConfigurationReader(Path.Combine(TestContext.CurrentContext.TestDirectory, @"features.json"));
+            var reader = new JsonFileConfigurationReader(@"features.json");
             List<IFeatureToggle> features = reader.GetFeatures().ToList();
 
             var feature = features.Single(x => x.Name == "testDateRange") as DateRangeToggle;
@@ -55,10 +57,11 @@ namespace Switcheroo.JsonFileConfigurationReader.Test
             Assert.AreEqual(2, feature.EnabledToDate.Value.Day);
         }
 
-        [Test]
+        [TestMethod]
+        [DeploymentItem("features.json")]
         public void Read_Returns_DateRange_Toggles_If_Only_From_Date_Has_Been_Specified()
         {
-            var reader = new JsonFileConfigurationReader(Path.Combine(TestContext.CurrentContext.TestDirectory, @"features.json"));
+            var reader = new JsonFileConfigurationReader(@"features.json");
             List<IFeatureToggle> features = reader.GetFeatures().ToList();
 
             var feature = features.Single(x => x.Name == "testDateRangeFromOnly") as DateRangeToggle;
@@ -73,10 +76,11 @@ namespace Switcheroo.JsonFileConfigurationReader.Test
             Assert.IsNull(feature.EnabledToDate);
         }
 
-        [Test]
+        [TestMethod]
+        [DeploymentItem("features.json")]
         public void Read_Returns_DateRange_Toggles_If_Only_To_Date_Has_Been_Specified()
         {
-            var reader = new JsonFileConfigurationReader(Path.Combine(TestContext.CurrentContext.TestDirectory, @"features.json"));
+            var reader = new JsonFileConfigurationReader(@"features.json");
             List<IFeatureToggle> features = reader.GetFeatures().ToList();
 
             var feature = features.Single(x => x.Name == "testDateRangeUntilOnly") as DateRangeToggle;
@@ -91,10 +95,11 @@ namespace Switcheroo.JsonFileConfigurationReader.Test
             Assert.AreEqual(2, feature.EnabledToDate.Value.Day);
         }
 
-        [Test]
+        [TestMethod]
+        [DeploymentItem("features.json")]
         public void Read_Returns_Established_Toggle_If_Feature_Is_Established()
         {
-            var reader = new JsonFileConfigurationReader(Path.Combine(TestContext.CurrentContext.TestDirectory, @"features.json"));
+            var reader = new JsonFileConfigurationReader(@"features.json");
             List<IFeatureToggle> features = reader.GetFeatures().ToList();
 
             var feature = features.Single(x => x.Name == "testEstablished") as EstablishedFeatureToggle;
@@ -102,10 +107,11 @@ namespace Switcheroo.JsonFileConfigurationReader.Test
             Assert.IsNotNull(feature);
         }
 
-        [Test]
+        [TestMethod]
+        [DeploymentItem("features.json")]
         public void Read_Returns_Dependency_Toggles()
         {
-            var reader = new JsonFileConfigurationReader(Path.Combine(TestContext.CurrentContext.TestDirectory, @"features.json"));
+            var reader = new JsonFileConfigurationReader(@"features.json");
 
             List<IFeatureToggle> features = reader.GetFeatures().ToList();
             var feature = features.Single(x => x.Name == "testDependencies") as DependencyToggle;
