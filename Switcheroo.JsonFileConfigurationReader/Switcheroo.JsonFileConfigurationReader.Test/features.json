@@ -1,0 +1,38 @@
+﻿[
+  {
+    "name": "testDateRange",
+    "enabled": true,
+    "from": "1 November 2012",
+    "until": "2 November 2012"
+  },
+  {
+    "name": "testDateRangeFromOnly",
+    "enabled": true,
+    "from": "1 November 2012"
+  },
+  {
+    "name": "testDateRangeUntilOnly",
+    "enabled": true,
+    "until": "2 November 2012"
+  },
+  {
+    "name": "testEstablished",
+    "established": true
+  },
+  {
+    "name": "testDependencies",
+    "enabled": true,
+    "dependencies": [
+      "testSimpleEnabled",
+      "testSimpleDisabled"
+    ]
+  },
+  {
+    "name": "testSimpleEnabled",
+    "enabled": true
+  },
+  {
+    "name": "testSimpleDisabled",
+    "enabled": false
+  }
+]

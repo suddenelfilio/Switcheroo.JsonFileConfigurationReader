@@ -1,2 +1,2 @@
 # Switcheroo.JsonFileConfigurationReader
-A custom ConfigurationReader implementation for FeatureFlags library Switcheroo
+A custom ConfigurationReader implementation for FeatureFlags library Switcheroo 
