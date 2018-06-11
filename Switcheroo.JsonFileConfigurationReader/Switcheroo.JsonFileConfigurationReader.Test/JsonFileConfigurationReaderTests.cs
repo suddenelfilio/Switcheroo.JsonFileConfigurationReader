@@ -1,12 +1,10 @@
 ﻿
 using System.IO;
-using Switcheroo.Configuration;
 using Switcheroo.Toggles;
 
 namespace Switcheroo.JsonFileConfigurationReader.Test
 {
     using System.Collections.Generic;
-    using System.Configuration;
     using System.Linq;
     using NUnit.Framework;
 
