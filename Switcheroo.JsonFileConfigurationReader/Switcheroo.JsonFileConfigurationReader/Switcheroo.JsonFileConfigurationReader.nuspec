@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0"?>
 <package >
   <metadata>
-    <id>$id$</id>
+    <id>Switcheroo.JsonFileConfigurationReader</id>
     <version>$version$</version>
     <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
+    <authors>Filip STAS</authors>
+    <owners>Visuasoft</owners>
     <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
     <projectUrl>https://github.com/suddenelfilio/Switcheroo.JsonFileConfigurationReader</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
