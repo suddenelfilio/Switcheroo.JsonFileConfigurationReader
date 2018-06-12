@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Switcheroo.JsonFileConfigur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Switcheroo.ConfigurationReader.Json", "Switcheroo.ConfigurationReader.Json\Switcheroo.ConfigurationReader.Json.csproj", "{10D77DEA-9D99-40C1-8C23-0B7E6E6FE04D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Switcheroo.ConfigurationReader.Json.Test", "Switcheroo.ConfigurationReader.Json.Test\Switcheroo.ConfigurationReader.Json.Test.csproj", "{AE8F38E3-98C1-47E4-BD45-FD7829C01452}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{10D77DEA-9D99-40C1-8C23-0B7E6E6FE04D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10D77DEA-9D99-40C1-8C23-0B7E6E6FE04D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10D77DEA-9D99-40C1-8C23-0B7E6E6FE04D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE8F38E3-98C1-47E4-BD45-FD7829C01452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE8F38E3-98C1-47E4-BD45-FD7829C01452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE8F38E3-98C1-47E4-BD45-FD7829C01452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE8F38E3-98C1-47E4-BD45-FD7829C01452}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
