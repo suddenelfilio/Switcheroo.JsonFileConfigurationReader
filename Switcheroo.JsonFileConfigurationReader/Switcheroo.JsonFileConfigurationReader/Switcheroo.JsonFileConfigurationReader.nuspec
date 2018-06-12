@@ -10,8 +10,13 @@
     <projectUrl>https://github.com/suddenelfilio/Switcheroo.JsonFileConfigurationReader</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A json file configuration reader implementation for the Switcheroo FeatureFlag library.</description>
-    <releaseNotes>Pre-release</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>Feature Toggle Switch FeatureSwitch FeatureToggle</tags>
+    <dependencies>
+      <dependency id="Switcheroo" version="0.3.4753.37554"/>
+    </dependencies>
   </metadata>
+  <files>
+    <file src=".\bin\Release\Switcheroo.JsonFileConfigurationReader" target="lib\461"/>
+  </files>
 </package>

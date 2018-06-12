@@ -10,10 +10,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Switcheroo.JsonFileConfigurationReader.Test</RootNamespace>
     <AssemblyName>Switcheroo.JsonFileConfigurationReader.Test</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -65,9 +66,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Switcheroo.JsonFileConfigurationReader\Switcheroo.JsonFileConfigurationReader.csproj">
-      <Project>{90186f89-0a41-4101-b3b3-043e4d906545}</Project>
-      <Name>Switcheroo.JsonFileConfigurationReader</Name>
+    <ProjectReference Include="..\Switcheroo.ConfigurationReader.Json\Switcheroo.ConfigurationReader.Json.csproj">
+      <Project>{10D77DEA-9D99-40C1-8C23-0B7E6E6FE04D}</Project>
+      <Name>Switcheroo.ConfigurationReader.Json</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

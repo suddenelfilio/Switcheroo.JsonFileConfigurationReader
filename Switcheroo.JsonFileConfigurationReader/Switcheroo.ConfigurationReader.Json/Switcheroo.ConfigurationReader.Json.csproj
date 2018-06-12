@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net461</TargetFrameworks>
+    <PackageId>Switcheroo.JsonFileConfigurationReader</PackageId>
+    <Authors>Filip STAS</Authors>
+    <Company>Visuasoft</Company>
+    <Product>Switcheroo.JsonFileConfigurationReader</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Switcheroo" Version="0.3.4753.37554" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Configuration" />
+  </ItemGroup>
+
+</Project>
