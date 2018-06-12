@@ -6,6 +6,10 @@
     <Authors>Filip STAS</Authors>
     <Company>Visuasoft</Company>
     <Product>Switcheroo.JsonFileConfigurationReader</Product>
+    <RepositoryUrl>https://github.com/suddenelfilio/Switcheroo.JsonFileConfigurationReader</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/suddenelfilio/Switcheroo.JsonFileConfigurationReader</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/suddenelfilio/Switcheroo.JsonFileConfigurationReader/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
