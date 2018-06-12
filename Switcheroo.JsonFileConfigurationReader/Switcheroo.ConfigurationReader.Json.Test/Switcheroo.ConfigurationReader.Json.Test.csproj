@@ -5,6 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MSTest.TestAdapter" Version="1.3.2" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.3.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Switcheroo" Version="0.3.4753.37554" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Switcheroo.ConfigurationReader.Json\Switcheroo.ConfigurationReader.Json.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="features.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
